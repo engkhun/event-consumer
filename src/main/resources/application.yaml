@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    function:
+      definition: eventConsumer;orderEventProducer
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        eventConsumer-in-0:
+          destination: data_stream
+        eventProducer-out-0:
+          destination: data_stream
