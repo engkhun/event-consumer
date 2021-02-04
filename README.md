@@ -19,7 +19,7 @@ Download apache kafka:[https://kafka.apache.org/downloads](https://kafka.apache.
 > - Go to C:\kafka\kafka\_2.12-2.7.0\bin\windows
 > - Run this cmd: kafka-server-start.bat C:\Kafka\kafka\_2.12-2.7.0\config\server.properties
 
-### Bootstrap your application with Spring Initializr.
+## Bootstrap your application with Spring Initializr.
 
 [https://start.spring.io/](https://start.spring.io/)
 
