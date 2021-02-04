@@ -1,7 +1,7 @@
 spring:
   cloud:
     function:
-      definition: eventConsumer;orderEventProducer
+      definition: orderingEventConsumer;orderingEventProducer
     stream:
       kafka:
         binder:

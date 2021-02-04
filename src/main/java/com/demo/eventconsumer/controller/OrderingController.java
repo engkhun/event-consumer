@@ -59,7 +59,7 @@ public class OrderingController {
   }
 
   @Bean
-  public Supplier<Flux<?>> orderEventProducer() {
+  public Supplier<Flux<?>> orderingEventProducer() {
     return () -> processor;
   }
 

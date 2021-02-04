@@ -8,15 +8,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class OrderEventConfig {
+public class OrderingEventConfig {
   @Autowired
   private OrderingService orderingService;
 
   @Bean
-  public Consumer<Order> eventConsumer() {
+  public Consumer<Order> orderingEventConsumer() {
     //public Consumer<Message<byte[]>> eventConsumer() {
-    return order -> {
-      orderingService.processOrderEvent(order);
-    };
+    return order -> orderingService.processOrderEvent(order);
   }
 }
