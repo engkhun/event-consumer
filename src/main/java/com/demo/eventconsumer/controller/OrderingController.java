@@ -30,7 +30,6 @@ public class OrderingController {
   /*
   @PostMapping("/produce")
   public boolean sendEventWithHeader(@RequestBody EventMessage msg) {
-    System.out.println("\n\nproduce...");
     msg.setBytePayload(msg.getData().getBytes());
     return StreamBridge.send("eventProducer-out-0",
         MessageBuilder.withPayload(msg)
@@ -41,16 +40,14 @@ public class OrderingController {
 
   private final EmitterProcessor<Message<Order>> processor = EmitterProcessor.create();
 
-  @PostMapping("/produce")
+  @PostMapping("/createOrder")
   public boolean createOrder(@RequestBody Order order) {
     try{
-      System.out.println("\n\nproduce...");
       order.setBytePayload(orderingService.createOrderEvent(order));
       Message<Order> message = MessageBuilder.withPayload(order)
                 .setHeader(MessageHeaders.CONTENT_TYPE, MimeTypeUtils.APPLICATION_JSON).build();
 
       processor.onNext(message);
-      System.out.println("\n\nmessage="+message);
       return true;
     }catch(Exception ex){
       System.out.println("\nerror="+ex.getMessage());

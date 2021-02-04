@@ -14,7 +14,7 @@ public class OrderingServiceImpl implements  OrderingService{
 
   @Override
   public void processOrderEvent(Order order) {
-    System.out.println("Received: " + order);
+    System.out.println("Ordering Event received: " + order);
 
   }
 }

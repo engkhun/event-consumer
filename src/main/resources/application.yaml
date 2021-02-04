@@ -7,7 +7,8 @@ spring:
         binder:
           brokers: localhost:9092
       bindings:
-        eventConsumer-in-0:
+        orderingEventConsumer-in-0:
           destination: data_stream
-        eventProducer-out-0:
+          group: eventConsumer-dev-local
+        orderingEventProducer-out-0:
           destination: data_stream
