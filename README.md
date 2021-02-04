@@ -1,4 +1,4 @@
-# event-consumer
+# Event-Driven Microservices
 ## Prerequisites
 
 ### Download IntelliJ IDEA:
