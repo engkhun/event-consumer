@@ -55,6 +55,8 @@ spring:
 ```
 
 ### Producer:
+Event producer: 
+For producing message, using rest controller and putting the message on the topic(data_stream).
 
 Writing a controller, the Controller is used to handle the incoming HTTP request from the user and returns an appropriate response.
 
