@@ -33,6 +33,7 @@ Functional Interface Input/Output can be defined through the following rules in 
 •	Input : (function name) + -in- + (index)
 •	Output : (function name) + -out- + (index)
 ```
+For example, orderingEventConsumer-in-0 in the example below defines a binding for function orderingEventConsumer that is an input that subscribes to a channel with the data it receives in the first input parameter (index 0).
 
 ### Application.yaml
 ```yaml
