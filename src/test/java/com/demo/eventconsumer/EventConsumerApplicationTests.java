@@ -8,7 +8,6 @@ class EventConsumerApplicationTests {
 
 	@Test
 	void contextLoads() {
-		//testing
 	}
 
 }
